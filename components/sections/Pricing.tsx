@@ -46,7 +46,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-50 py-24">
       {/* Header */}
       <section className="mx-auto max-w-4xl px-6 py-20 text-center">
         <h1 className="text-3xl font-semibold text-gray-900">
@@ -109,7 +109,7 @@ export default function Pricing() {
       </section>
 
       {/* CTA */}
-      <section className="border-t bg-gray-50">
+      <section className="border-t bg-gray-50 py-24">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
           <h2 className="text-2xl font-semibold text-gray-900">
             Tidak yakin plan mana yang cocok?

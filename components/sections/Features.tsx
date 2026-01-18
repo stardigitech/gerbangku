@@ -1,13 +1,13 @@
 export default function Features() {
   return (
-    <section id="fitur" className="bg-neutral-950 py-24">
+    <section id="fitur" className="bg-gray-50 py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
             Fitur yang Membantu Bisnis Anda Tumbuh
           </h2>
-          <p className="mt-4 text-neutral-400">
+          <p className="mt-4 text-gray-600">
             Gerbangku menyediakan fitur inti yang dibutuhkan
             untuk mengelola operasional bisnis secara modern,
             tanpa kompleksitas berlebihan.
