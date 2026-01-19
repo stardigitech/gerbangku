@@ -1,30 +1,17 @@
+import StatCard from "@/components/dashboard/StatCard";
+
 export default function DashboardPage() {
   return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold text-gray-800">
-          Ringkasan
-        </h2>
-        <p className="text-sm text-gray-500">
-          Overview aktivitas bisnis Anda
-        </p>
+    <>
+      <div className="grid gap-6 md:grid-cols-3">
+        <StatCard title="Total Bisnis" value="1" />
+        <StatCard title="Transaksi Bulan Ini" value="24" />
+        <StatCard title="Pendapatan" value="Rp 2.500.000" />
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
-        {["Bisnis Aktif", "Transaksi", "Pendapatan"].map(
-          (item) => (
-            <div
-              key={item}
-              className="rounded-xl border bg-white p-6"
-            >
-              <p className="text-sm text-gray-500">{item}</p>
-              <p className="mt-2 text-2xl font-semibold">
-                —
-              </p>
-            </div>
-          )
-        )}
+      <div className="mt-8 rounded-2xl border border-dashed border-gray-300 bg-white p-10 text-center text-gray-500">
+        Area konten utama (grafik, tabel, dll)
       </div>
-    </div>
+    </>
   );
 }

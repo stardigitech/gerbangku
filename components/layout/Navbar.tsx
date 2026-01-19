@@ -1,43 +1,44 @@
-import Link from "next/link";
-
 export default function Navbar() {
   return (
-    <header className="fixed top-0 z-50 w-full">
+    <header className="fixed inset-x-0 top-6 z-50">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mt-4 flex h-14 items-center justify-between rounded-2xl border border-neutral-800 bg-neutral-900/70 px-6 backdrop-blur">
-          {/* Logo */}
-          <Link href="/" className="text-sm font-semibold text-white">
-            Gerbangku
-          </Link>
+        <div className="flex items-center justify-between rounded-2xl bg-white/80 px-6 py-3 shadow-sm backdrop-blur ring-1 ring-black/5">
 
-          {/* Menu */}
-          <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-300">
-            <Link href="#fitur" className="hover:text-white transition">
+          {/* Logo */}
+          <div className="font-jakarta text-lg font-bold text-slate-900">
+            Gerbangku
+          </div>
+
+          {/* Nav */}
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <a href="#fitur" className="hover:text-slate-900 transition">
               Fitur
-            </Link>
-            <Link href="#solusi" className="hover:text-white transition">
+            </a>
+            <a href="#solusi" className="hover:text-slate-900 transition">
               Solusi
-            </Link>
-            <Link href="#harga" className="hover:text-white transition">
+            </a>
+            <a href="#harga" className="hover:text-slate-900 transition">
               Harga
-            </Link>
+            </a>
           </nav>
 
           {/* CTA */}
           <div className="flex items-center gap-4">
-            <Link
+            <a
               href="/login"
-              className="text-sm text-neutral-300 hover:text-white transition"
+              className="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
             >
               Masuk
-            </Link>
-            <Link
-              href="/daftar"
-              className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black hover:bg-neutral-200 transition"
+            </a>
+
+            <a
+              href="/register"
+              className="inline-flex items-center rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition"
             >
               Mulai
-            </Link>
+            </a>
           </div>
+
         </div>
       </div>
     </header>

@@ -6,12 +6,12 @@ import CTA from "@/components/sections/CTA";
 
 export default function HomePage() {
   return (
-    <main>
+    <>
       <Hero />
       <Features />
       <Solutions />
       <Pricing />
       <CTA />
-    </main>
+    </>
   );
 }

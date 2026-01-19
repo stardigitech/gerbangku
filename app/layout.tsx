@@ -1,27 +1,29 @@
 import "./globals.css";
-import { ReactNode } from "react";
-import { Inter } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
-export const metadata = {
-  title: "Gerbangku — Satu Gerbang Digital untuk Semua Bisnis",
-  description:
-    "Platform digital terpadu untuk membantu bisnis tradisional, UMKM, hospitality, dan usaha menengah berkembang secara modern.",
-};
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  display: "swap",
+});
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="id" className={inter.className}>
-      <body className="bg-white text-gray-800 antialiased">
-        <Navbar />
+    <html lang="id">
+      <body
+        className={`${inter.variable} ${jakarta.variable} bg-bg text-primary`}
+      >
         {children}
-        <Footer />
       </body>
     </html>
   );
