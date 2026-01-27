@@ -1,28 +1,55 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { OrganizationSchema } from "./schema";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
-export const metadata = {
-  metadataBase: new URL("https://gerbangku.com"),
-  title: {
-    default: "Gerbangku — Unified Digital Platform",
-    template: "%s | Gerbangku"
-  },
+export const metadata: Metadata = {
   description:
-    "Gerbangku adalah platform SaaS untuk hospitality dan service business: booking engine, website, dan operasional dalam satu sistem.",
+    "Gerbangku is a unified digital platform to manage websites, operations, and workflows for businesses across industries.",
+  keywords: [
+    "business platform",
+    "business management software",
+    "workflow management",
+    "booking system",
+    "UMKM software",
+    "hospitality software",
+    "SaaS platform"
+  ],
   openGraph: {
-    title: "Gerbangku",
+    title: "Gerbangku – Unified Platform to Run Your Business",
     description:
-      "Unified digital platform untuk booking, website, dan operasional bisnis modern.",
+      "Manage your website, operations, and business growth in one flexible platform.",
     url: "https://gerbangku.com",
     siteName: "Gerbangku",
-    locale: "id_ID",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Gerbangku Platform"
+      }
+    ],
+    locale: "en_US",
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gerbangku – Unified Platform to Run Your Business",
+    description:
+      "A flexible SaaS platform designed for businesses across industries.",
+    images: ["/og-image.png"]
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
   }
 };
 
@@ -34,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className="bg-[#0B0F14] text-white antialiased">
+        <OrganizationSchema />
         <Navbar />
         {children}
         <Footer />
