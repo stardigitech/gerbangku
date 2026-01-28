@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
@@ -25,22 +26,14 @@ export function Hero() {
           <div className="mt-8 flex gap-4">
             <Link
               href="#contact"
-              className="
-                rounded-xl bg-white text-black
-                px-6 py-3 text-sm font-medium
-                hover:bg-gray-200 transition
-              "
+              className="rounded-xl bg-white text-black px-6 py-3 text-sm font-medium hover:bg-gray-200 transition"
             >
               Request Demo
             </Link>
 
             <Link
               href="#solutions"
-              className="
-                rounded-xl border border-white/20
-                px-6 py-3 text-sm text-gray-300
-                hover:bg-white/5 transition
-              "
+              className="rounded-xl border border-white/20 px-6 py-3 text-sm text-gray-300 hover:bg-white/5 transition"
             >
               Explore Solutions
             </Link>
@@ -49,14 +42,18 @@ export function Hero() {
 
         {/* Right visual */}
         <div className="relative">
-          <div
-            className="
-              aspect-[4/3] rounded-2xl
-              bg-gradient-to-br from-white/10 to-white/5
-              border border-white/10
-              shadow-2xl
-            "
-          />
+          <div className="absolute -inset-4 bg-white/10 blur-2xl rounded-3xl opacity-30" />
+
+          <div className="relative rounded-2xl border border-white/10 bg-white/5 shadow-[0_30px_80px_rgba(0,0,0,0.6)] overflow-hidden">
+            <Image
+              src="/assets/images/hero-dashboard2-1.png"
+              alt="Gerbangku platform dashboard"
+              width={800}
+              height={600}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
