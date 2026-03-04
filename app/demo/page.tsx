@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function DemoPage() {
   const [showOther, setShowOther] = useState(false);
@@ -32,13 +33,11 @@ export default function DemoPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Tentukan industry final
     const finalIndustry =
       form.industry === "Others"
         ? form.otherIndustry
         : form.industry;
 
-    // Buang otherIndustry supaya payload bersih
     const { otherIndustry, ...rest } = form;
 
     const finalData = {
@@ -48,15 +47,18 @@ export default function DemoPage() {
 
     console.log("Demo Request:", finalData);
 
-    alert("Thank you! Our team will contact you soon.");
+    // 🔥 Toast Success
+    toast.success("Demo request sent successfully!", {
+      description: "Our team will contact you soon.",
+    });
 
     setForm({
-        name: "",
-        company: "",
-        industry: "",
-        otherIndustry: "",
-        email: "",
-        message: "",
+      name: "",
+      company: "",
+      industry: "",
+      otherIndustry: "",
+      email: "",
+      message: "",
     });
 
     setShowOther(false);
@@ -83,7 +85,7 @@ export default function DemoPage() {
             required
             value={form.name}
             onChange={handleChange}
-            className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white transition"
+            className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 transition"
           />
 
           <input
@@ -93,7 +95,7 @@ export default function DemoPage() {
             required
             value={form.company}
             onChange={handleChange}
-            className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white transition"
+            className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 transition"
           />
 
           <select
@@ -101,7 +103,7 @@ export default function DemoPage() {
             required
             value={form.industry}
             onChange={handleChange}
-            className="w-full bg-white/10 text-white border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white transition"
+            className="w-full bg-white/10 text-white border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 transition"
           >
             <option value="" className="bg-gray-900 text-white">
               Select Industry
@@ -131,7 +133,7 @@ export default function DemoPage() {
               required
               value={form.otherIndustry}
               onChange={handleChange}
-              className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white transition"
+              className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 transition"
             />
           )}
 
@@ -142,7 +144,7 @@ export default function DemoPage() {
             required
             value={form.email}
             onChange={handleChange}
-            className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white transition"
+            className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 transition"
           />
 
           <textarea
@@ -151,12 +153,12 @@ export default function DemoPage() {
             rows={4}
             value={form.message}
             onChange={handleChange}
-            className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white transition"
+            className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 transition"
           />
 
           <button
             type="submit"
-            className="w-full bg-white text-black font-medium py-3 rounded-lg hover:opacity-90 transition"
+            className="w-full bg-white text-black font-medium py-3 rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
             Schedule Demo
           </button>

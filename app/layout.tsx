@@ -1,8 +1,9 @@
-import "./globals.css";
+import "./global.css";
 import type { Metadata } from "next";
 import { OrganizationSchema } from "./schema";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
   description:
@@ -65,6 +66,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+
+        <Providers />
 
         <script
           type="application/ld+json"
