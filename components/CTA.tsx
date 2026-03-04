@@ -25,7 +25,7 @@ export function CTA() {
 
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <Link
-                        href="#"
+                        href="/demo"
                         className="
                         rounded-xl bg-white text-black
                         px-8 py-3 text-sm font-medium

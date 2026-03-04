@@ -25,7 +25,7 @@ export function Hero() {
 
           <div className="mt-8 flex gap-4">
             <Link
-              href="#contact"
+              href="/demo"
               className="rounded-xl bg-white text-black px-6 py-3 text-sm font-medium hover:bg-gray-200 transition"
             >
               Request Demo
