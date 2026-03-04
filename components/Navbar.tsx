@@ -87,7 +87,7 @@ export function Navbar() {
 
             {/* CTA Button */}
             <Link
-              href="#contact"
+              href="/login"
               className={`
                 ml-4 px-4 py-2 rounded-xl transition
                 ${
