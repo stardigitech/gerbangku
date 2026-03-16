@@ -1,17 +1,20 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
+
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
   ],
+
   theme: {
     extend: {
       colors: {
-        primary: "#0F172A",   // slate-900
-        accent: "#2563EB",    // blue-600
-        muted: "#64748B",     // slate-500
-        bg: "#F8FAFC",        // slate-50
+        primary: "#0F172A", // slate-900
+        accent: "#2563EB", // blue-600
+        muted: "#64748B", // slate-500
+        bg: "#F8FAFC", // slate-50
 
         success: "#16A34A",
         warning: "#F59E0B",
@@ -33,6 +36,7 @@ const config: Config = {
       },
     },
   },
+
   plugins: [],
 };
 

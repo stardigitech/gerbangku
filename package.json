@@ -11,10 +11,12 @@
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
     "@fontsource/plus-jakarta-sans": "^5.2.8",
+    "cmdk": "^1.1.1",
     "lucide-react": "^0.574.0",
     "next": "16.1.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "recharts": "^3.8.0",
     "sonner": "^2.0.7"
   },
   "devDependencies": {
