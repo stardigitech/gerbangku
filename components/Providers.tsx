@@ -2,12 +2,16 @@
 
 import { Toaster } from "sonner";
 
-export function Providers() {
+export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <Toaster 
-      position="top-center" 
-      richColors 
-      closeButton
-    />
+    <>
+      {children}
+
+      <Toaster
+        position="top-center"
+        richColors
+        closeButton
+      />
+    </>
   );
 }

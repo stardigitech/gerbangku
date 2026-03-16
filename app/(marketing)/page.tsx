@@ -1,10 +1,10 @@
-import { Hero } from "@/components/Hero";
-import { Features } from "@/components/Features";
-import { Solutions } from "@/components/Solutions";
-import { WhyGerbangku } from "@/components/WhyGerbangku";
-import { HowItWorks } from "@/components/HowItWorks";
-import { Pricing } from "@/components/Pricing";
-import { CTA } from "@/components/CTA";
+import { Hero } from "@/components/landing/Hero";
+import { Features } from "@/components/landing/Features";
+import { Solutions } from "@/components/landing/Solutions";
+import { WhyGerbangku } from "@/components/landing/WhyGerbangku";
+import { HowItWorks } from "@/components/landing/HowItWorks";
+import { Pricing } from "@/components/landing/Pricing";
+import { CTA } from "@/components/landing/CTA";
 
 export const metadata = {
   title: "All-in-One Business Platform",
